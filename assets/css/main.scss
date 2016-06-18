@@ -1,0 +1,229 @@
+$main_color : #efc581;
+@font-face {
+  font-family: 'quarkbold';
+  src: url('../fonts/quark-bold-webfont.eot');
+  src: url('../fonts/quark-bold-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/quark-bold-webfont.woff2') format('woff2'),
+  url('../fonts/quark-bold-webfont.woff') format('woff'),
+  url('../fonts/quark-bold-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'quarklight';
+  src: url('../fonts/quark-light-webfont.eot');
+  src: url('../fonts/quark-light-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/quark-light-webfont.woff2') format('woff2'),
+  url('../fonts/quark-light-webfont.woff') format('woff'),
+  url('../fonts/quark-light-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+
+}
+body{
+  font-family: quarklight;
+  color: #fff;
+  line-height: 180%;
+  letter-spacing: 1.3px;
+}
+a{
+  color: #fff;
+  &:visited,&:focus,&:hover{
+    color: #fff;
+    text-decoration: none;
+  }
+}
+.img-responsive{
+  display: inline-block;
+}
+.pt60{
+  padding-top: 60px;
+}
+.header{
+
+  background-color: rgba(0, 0, 0, 0.8);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+  height: 75px;
+  border-bottom: 2px solid #6e6048;
+  position: fixed;
+  width: 100%;
+  top:0;
+  left:0;
+  z-index: 2;
+
+}
+.logo{
+  float: left;
+  line-height: 75px;
+}
+.nav-menu{
+  line-height: 75px;
+  float: right;
+  ul{
+    margin: 0;
+  }
+
+  li{
+
+    display: inline-block;
+    a{
+      position: relative;
+      font-size: 20px;
+      margin: 0 30px;
+      display: block;
+    }
+    &.active a::after,&:hover a::after{
+      content: "";
+      border-bottom: 2px solid #e8bf7d;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: 1px;
+    }
+
+  }
+}
+.banner-slider{
+  border-bottom: 2px solid #6e6048;
+}
+.hl{
+  background: #222222;
+  padding: 60px 0;
+  border-bottom: 2px solid #6e6048;
+}
+.hlb{
+  background: #000;
+  padding: 60px 0 0 0;
+  border-bottom: 2px solid #6e6048;
+}
+.txt-about{
+  color: $main_color;
+  font-size: 34px;
+  margin-bottom: 30px;
+}
+.txt-head{
+  color: $main_color;
+  font-size: 34px;
+  margin: 0 0 100px;
+  text-align: center;
+}
+.relative{
+  position: relative;
+}
+.p1{
+  position: absolute;
+}
+.about{
+
+  h1{
+    font-family: quarkbold;
+    font-size: 36px;
+    margin: 0 0 10px;
+  }
+  p{
+    font-size: 24px;
+    line-height: 160%;
+  }
+  img{
+    margin-bottom: 30px;
+  }
+}
+.no-padding{
+  padding: 0;
+}
+.hl-review{
+  background: url("../images/bg-review.jpg") center center no-repeat;
+  padding: 100px 0;
+  background-size:cover;
+}
+.btt{
+  background: #e9c688;
+  height: 60px;
+  line-height: 60px;
+  color: #000 !important;
+  display: block;
+  text-align: center;
+}
+footer{
+  background: #000;
+}
+.social{
+  text-align: center;
+  padding: 65px 0 30px 0;
+  a{
+    display: inline-block;
+    padding: 0 15px;
+  }
+}
+.copyright{
+  color: #686868;
+  margin-bottom: 60px;
+  text-align: center;
+}
+.menu-mobile{
+  display: none;
+}
+.carousel-indicators{
+  z-index: 1;
+}
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px){
+  .menu-mobile{
+    display: inline-block;
+    float: right;
+    line-height: 75px;
+    font-size: 25px;
+  }
+  .header{
+    position: relative;
+  }
+  .nav-menu{
+    position: absolute;
+    top:75px;
+    left: 0;
+    background: #000;
+    z-index: 999999;
+    float: none;
+    width: 100%;
+    display: none;
+    li{
+      display: block;
+      border-bottom:1px solid $main_color;
+      &.active a::after,&:hover a::after{
+        content: none !important;
+
+
+      }
+    }
+
+
+  }
+  .hl{
+    padding: 30px 0;
+  }
+  .pt60{
+    padding: 15px 0;
+  }
+  .about{
+    h1{
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+  }
+  .spec1{
+    margin-bottom: 30px;
+  }
+  .social{
+    a{
+      padding: 0 10px;
+      img{
+        height: 30px;
+      }
+    }
+  }
+  .copyright{
+    font-size: 13px;
+    font-family: quarkbold;
+  }
+}
