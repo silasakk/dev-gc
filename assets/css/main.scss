@@ -23,6 +23,7 @@ $main_color : #efc581;
 }
 body{
   font-family: quarklight;
+  padding-top: 75px;
   color: #fff;
   line-height: 180%;
   letter-spacing: 1.3px;
@@ -42,7 +43,7 @@ a{
 }
 .header{
 
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.7);
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
   height: 75px;
   border-bottom: 2px solid #6e6048;
@@ -96,6 +97,72 @@ a{
   background: #000;
   padding: 60px 0 0 0;
   border-bottom: 2px solid #6e6048;
+}
+.page-black{
+  border-bottom: 2px solid $main_color;
+  background: #000;
+  padding: 60px 0;
+  p{
+    color: #999999;
+    margin: 30px 0;
+    text-align: center;
+    font-size: 18px;
+  }
+
+
+}
+.card-2{
+  background: #000;
+  padding: 15px;
+}
+.page-soft{
+  border-bottom: 2px solid $main_color;
+  padding: 60px 0;
+  background: #151515;
+}
+.text-hl{
+  padding: 30px 0;
+  color: $main_color;
+  font-size: 20px;
+  text-align: center;
+}
+.text-hl-big{
+  padding: 60px 0;
+  color: $main_color;
+  font-size: 20px;
+  text-align: center;
+}
+.card-1{
+  background: #151515;
+  margin-bottom: 30px;
+  padding: 15px;
+}
+.card-left {
+  .text-hl{
+    text-align: left;
+    padding: 10px 0;
+  }
+  p{
+    text-align: left;
+  }
+  i,img{
+    margin-right: 30px;
+    color: $main_color;
+  }
+  img{
+    margin-left: -5px;
+  }
+  .tdtl{
+    padding-left: 30px;
+  }
+}
+.card-right{
+  padding-top: 40px;
+}
+h1.headline{
+  color: $main_color;
+  padding-bottom: 15px;
+  border-bottom : 1px solid $main_color
 }
 .txt-about{
   color: $main_color;
@@ -167,6 +234,29 @@ footer{
 .carousel-indicators{
   z-index: 1;
 }
+.label{
+  display: block;
+  text-align: left;
+  color: $main_color;
+  font-size: 14px;
+
+}
+input[type="text"],input[type="email"],textarea{
+
+  background: none;
+  width: 100%;
+  border:1px solid #403f3f;
+  padding: 10px;
+  outline: none;
+  margin-bottom: 30px;
+}
+.btn-primary{
+  background: $main_color;
+ border:none;
+  color: #000;
+  border-radius: 0;
+}
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px){
   .menu-mobile{
@@ -175,9 +265,10 @@ footer{
     line-height: 75px;
     font-size: 25px;
   }
-  .header{
-    position: relative;
+  .tdtl{
+    padding-left: 0 !important;
   }
+
   .nav-menu{
     position: absolute;
     top:75px;
