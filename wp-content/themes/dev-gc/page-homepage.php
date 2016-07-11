@@ -4,23 +4,66 @@
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
-                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                <?php
+
+                $image = get_field('banner');
+
+                if( !empty($image) ): ?>
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <?php endif; ?>
+                <?php
+
+                $image = get_field('banner_2');
+
+                if( !empty($image) ): ?>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <?php endif; ?>
+                <?php
+
+                $image = get_field('banner_3');
+
+                if( !empty($image) ): ?>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                <?php endif; ?>
+
+
+
             </ol>
 
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
 
-                <div class="item active">
-                    <img src="<? echo get_template_directory_uri() ?>/assets/images/banner-cosmetic.jpg" class="img-responsive">
-                </div>
-                <div class="item">
-                    <img src="<? echo get_template_directory_uri() ?>/assets/images/banner-cosmetic.jpg" class="img-responsive">
-                </div>
-                <div class="item">
-                    <img src="<? echo get_template_directory_uri() ?>/assets/images/banner-cosmetic.jpg" class="img-responsive">
-                </div>
+
+                    <?php
+
+                    $image = get_field('banner');
+
+                    if( !empty($image) ): ?>
+                        <div class="item active">
+                            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"  class="img-responsive"/>
+                        </div>
+                    <?php endif; ?>
+                <?php
+
+                $image = get_field('banner_2');
+
+                if( !empty($image) ): ?>
+                    <div class="item ">
+                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"  class="img-responsive"/>
+                    </div>
+                <?php endif; ?>
+                <?php
+
+                $image = get_field('banner_3');
+
+                if( !empty($image) ): ?>
+                    <div class="item ">
+                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"  class="img-responsive"/>
+                    </div>
+                <?php endif; ?>
+
+
+
 
             </div>
 
@@ -131,32 +174,32 @@
 
 
                 <div class="col-sm-4 no-padding">
-                    <img src="<?php the_field('review1') ?>" class="img-responsive" alt="">
+                    <a href="<?php echo site_url('reviews') ?>"><img src="<?php the_field('review1') ?>" class="img-responsive" alt=""></a>
                 </div>
                 <div class="col-sm-4 no-padding">
-                    <img src="<?php the_field('review2') ?>" class="img-responsive" alt="">
+                    <a href="<?php echo site_url('reviews') ?>"><img src="<?php the_field('review2') ?>" class="img-responsive" alt=""></a>
                 </div>
                 <div class="col-sm-4 no-padding">
-                    <img src="<?php the_field('review3') ?>" class="img-responsive" alt="">
+                    <a href="<?php echo site_url('reviews') ?>"><img src="<?php the_field('review3') ?>" class="img-responsive" alt=""></a>
                 </div>
                 <div class="col-sm-4 no-padding">
-                    <img src="<?php the_field('review4') ?>" class="img-responsive" alt="">
+                    <a href="<?php echo site_url('reviews') ?>"><img src="<?php the_field('review4') ?>" class="img-responsive" alt=""></a>
                 </div>
                 <div class="col-sm-4 no-padding">
-                    <img src="<? echo get_template_directory_uri() ?>/assets/images/logo-rw.png" class="img-responsive" alt="">
+                    <a href="<?php echo site_url('reviewss') ?>"><img src="<? echo get_template_directory_uri() ?>/assets/images/logo-rw.png" class="img-responsive" alt=""></a>
                 </div>
                 <div class="col-sm-4 no-padding">
-                    <img src="<?php the_field('review5') ?>" class="img-responsive" alt="">
+                    <a href="<?php echo site_url('reviews') ?>"><img src="<?php the_field('review5') ?>" class="img-responsive" alt="">
                 </div>
 
                 <div class="col-sm-4 no-padding">
-                    <img src="<?php the_field('review6') ?>" class="img-responsive" alt="">
+                    <a href="<?php echo site_url('reviews') ?>"><img src="<?php the_field('review6') ?>" class="img-responsive" alt=""></a></a>
                 </div>
                 <div class="col-sm-4 no-padding">
-                    <img src="<?php the_field('review7') ?>" class="img-responsive" alt="">
+                    <a href="<?php echo site_url('reviews') ?>"><img src="<?php the_field('review7') ?>" class="img-responsive" alt=""></a>
                 </div>
                 <div class="col-sm-4 no-padding">
-                    <img src="<?php the_field('review8') ?>" class="img-responsive" alt="">
+                    <a href="<?php echo site_url('reviews') ?>"><img src="<?php the_field('review8') ?>" class="img-responsive" alt=""></a>
                 </div>
             </div>
         </div>

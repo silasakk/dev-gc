@@ -9,8 +9,9 @@
         <br>
 
         <div class="text-center">
-            <a class="btn btn-primary" style="color: #000" href="<?php the_field('download') ?>">ดาวน์โหลดใบสมัคร</a>
+            <a class="btn btn-primary" style="color: #000" href="<?php the_field('download') ?>">ดาวน์โหลดใบสมัคร</a> <a class="btn btn-primary" style="color: #000" href="<?php the_field('register') ?>">ดาวน์โหลดใบสมัครสมาชิก</a>
         </div>
+
 
         <div class="text-hl">
             <?php  the_field('text2') ?>

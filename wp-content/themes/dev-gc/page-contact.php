@@ -55,7 +55,7 @@
             <script>
 
                 function initMap() {
-                    var myLatLng = {lat: 13.841384, lng: 100.557030};
+                    var myLatLng = {lat: 13.908098, lng: 100.5373293};
 
                     var map = new google.maps.Map(document.getElementById('map'), {
                         zoom: 16,
@@ -91,7 +91,7 @@
                     <div class="card-left">
                         <div class="text-hl">ที่ตั้งสำนักงาน</div>
                         <p>
-                            เลขที่ 68/12 อาคารซีอีซี ชั้น 6 ถ.กำแพงเพชร 6 แขวงลาดยาว เขตจตุจักร กทม. 10900
+                            <?php the_field('address') ?>
                         </p>
                         <div class="ttime">
                             <p><i class="fa fa-clock-o" aria-hidden="true"></i> 24 ชม.</p>
