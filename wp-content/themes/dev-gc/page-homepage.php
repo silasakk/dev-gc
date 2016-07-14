@@ -105,8 +105,17 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
+                    <?php
 
-                    <img src="<? echo get_template_directory_uri() ?>/assets/images/pre1.png" class="img-responsive spec1" alt="">
+                    $image = get_field('image_about_left');
+
+                    if( !empty($image) ): ?>
+
+                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="img-responsive" />
+
+                    <?php endif; ?>
+
+
 
                 </div>
                 <div class="col-sm-6">
@@ -142,9 +151,9 @@
                         <div class="txt-about">
                             ตัวแทนจำหน่าย
                         </div>
-                        <p>
-                            <?php the_field('text_distribution')?>
-                        </p>
+                        <div>
+                            <?php echo wpautop(get_field('text_distribution'))?>
+                        </div>
 
                     </div>
                 </div>

@@ -4,7 +4,7 @@
 
     <?php
     if(isset($_POST['fullname'])){
-        $to = 'silasak.lf@gmail.com';
+        $to = 'in3beautylab@gmail.com';
 
         $subject = 'Contact gglassmask.com';
 
